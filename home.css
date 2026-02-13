@@ -459,3 +459,22 @@ body {
     font-size: 29px;
     color: #191919;
 }
+.status-message {
+    position: fixed;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    background: rgba(25, 25, 25, 0.9);
+    color: #fff;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 50;
+}
+
+.status-message.show {
+    opacity: 1;
+}
