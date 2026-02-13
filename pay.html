@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <title>결제창</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background: #e7f6ff;
-            font-family: sans-serif;
-        }
-
-        .center {
-            font-size: 3em;
-            font-weight: bold;
-            color: #0275d8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceBank | 결제</title>
+  <link rel="stylesheet" href="app.css">
 </head>
-
 <body>
-    <div class="center">결제창</div>
-</body>
+  <main class="page">
+    <div class="header">
+      <h1>💳 결제</h1>
+      <a href="home.html">홈으로</a>
+    </div>
 
+    <section class="card">
+      <h2>빠른 결제 메뉴</h2>
+      <p>음성 명령으로 결제 화면 이동 후, 결제 안내를 받을 수 있습니다.</p>
+      <ul class="list">
+        <li>오프라인 QR 결제</li>
+        <li>온라인 간편 결제</li>
+        <li>최근 결제 내역 음성 안내</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html">홈</a>
+    <a href="benefit.html">혜택</a>
+    <a href="pay.html" class="active">결제</a>
+    <a href="money.html">자산</a>
+    <a href="paper.html">증권</a>
+  </nav>
+</body>
 </html>

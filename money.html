@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <title>자산(머니) 화면</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background: #e6ffe6;
-            font-family: sans-serif;
-        }
-
-        .center {
-            font-size: 3em;
-            font-weight: bold;
-            color: #399946;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceBank | 자산</title>
+  <link rel="stylesheet" href="app.css">
 </head>
-
 <body>
-    <div class="center">자산(머니) 화면</div>
-</body>
+  <main class="page">
+    <div class="header">
+      <h1>💰 자산</h1>
+      <a href="home.html">홈으로</a>
+    </div>
 
+    <section class="card">
+      <h2>자산 요약</h2>
+      <p>현재 자산은 음성 서버에서 "1,000,000원"으로 안내됩니다.</p>
+      <ul class="list">
+        <li>예금: 650,000원</li>
+        <li>투자: 280,000원</li>
+        <li>포인트: 70,000원</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html">홈</a>
+    <a href="benefit.html">혜택</a>
+    <a href="pay.html">결제</a>
+    <a href="money.html" class="active">자산</a>
+    <a href="paper.html">증권</a>
+  </nav>
+</body>
 </html>

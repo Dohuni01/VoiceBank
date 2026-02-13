@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <title>증권(페이퍼) 화면</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background: #eceaff;
-            font-family: sans-serif;
-        }
-
-        .center {
-            font-size: 3em;
-            font-weight: bold;
-            color: #6756c7;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceBank | 증권</title>
+  <link rel="stylesheet" href="app.css">
 </head>
-
 <body>
-    <div class="center">증권(페이퍼) 화면</div>
-</body>
+  <main class="page">
+    <div class="header">
+      <h1>📈 증권</h1>
+      <a href="home.html">홈으로</a>
+    </div>
 
+    <section class="card">
+      <h2>투자 알림</h2>
+      <p>시세 확인, 포트폴리오 요약도 음성 안내 흐름으로 확장할 수 있습니다.</p>
+      <ul class="list">
+        <li>국내주식: +1.8%</li>
+        <li>해외ETF: +0.9%</li>
+        <li>채권형 펀드: +0.2%</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html">홈</a>
+    <a href="benefit.html">혜택</a>
+    <a href="pay.html">결제</a>
+    <a href="money.html">자산</a>
+    <a href="paper.html" class="active">증권</a>
+  </nav>
+</body>
 </html>

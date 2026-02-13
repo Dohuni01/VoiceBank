@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <title>혜택 화면</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background: #fff3cd;
-            font-family: sans-serif;
-        }
-
-        .center {
-            font-size: 3em;
-            font-weight: bold;
-            color: #6c5700;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceBank | 혜택</title>
+  <link rel="stylesheet" href="app.css">
 </head>
-
 <body>
-    <div class="center">혜택 화면</div>
-</body>
+  <main class="page">
+    <div class="header">
+      <h1>🎁 혜택</h1>
+      <a href="home.html">홈으로</a>
+    </div>
 
+    <section class="card">
+      <h2>이번 달 추천 혜택</h2>
+      <p>음성으로 "혜택 보여줘"라고 말하면 이동할 수 있어요.</p>
+      <ul class="list">
+        <li>송금 수수료 0원</li>
+        <li>생활 결제 3% 캐시백</li>
+        <li>고령자 전용 상담 연결</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html">홈</a>
+    <a href="benefit.html" class="active">혜택</a>
+    <a href="pay.html">결제</a>
+    <a href="money.html">자산</a>
+    <a href="paper.html">증권</a>
+  </nav>
+</body>
 </html>
