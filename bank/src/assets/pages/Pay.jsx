@@ -5,8 +5,8 @@ import SwipePage from "../components/SwipePage";
 // 카드 데이터
 const ACCOUNTS = [ 
   { bank: "카카오뱅크", barcode: "../../banklogo/barcode.png", qr: "../../banklogo/qr.png", cardIcon: "🏦", mainColor: "bg-gradient-to-br from-yellow-200 to-yellow-400" }, 
-  { bank: "국민은행", barcode: "../../banklogo/barcode.png", qr: "../../banklogo/qr.png", cardIcon: "💳", mainColor: "bg-gradient-to-br from-yellow-200 to-yellow-400" }, 
-  { bank: "토스뱅크", barcode: "../../banklogo/barcode.png", qr: "../../banklogo/qr.png", cardIcon: "📲", mainColor: "bg-gradient-to-br from-indigo-200 to-indigo-500" },
+  { bank: "국민은행", barcode: "../../banklogo/barcode.png", qr: "../../banklogo/qr.png", cardIcon: "💳", mainColor: "bg-gradient-to-br from-indigo-200 to-indigo-400" }, 
+  { bank: "토스뱅크", barcode: "../../banklogo/barcode.png", qr: "../../banklogo/qr.png", cardIcon: "📲", mainColor: "bg-gradient-to-br from-yellow-200 to-yellow-500" },
   { bank: "하나은행", barcode: "../../banklogo/barcode.png", qr: "../../banklogo/qr.png", cardIcon: "🍀", mainColor: "bg-gradient-to-br from-green-200 to-emerald-400" },
   { bank: "신한은행", barcode: "../../banklogo/barcode.png", qr: "../../banklogo/qr.png", cardIcon: "🔷", mainColor: "bg-gradient-to-br from-sky-200 to-sky-400" },
 ];
@@ -128,8 +128,8 @@ export default function Pay() {
                   width: "90%"
                 }}
               >
-                <div className="text-4xl mb-4">{account.cardIcon}</div>
-                <div className="text-2xl font-bold mb-2 text-gray-900">{account.bank}</div>
+                <div className="text-5xl mb-4">{account.cardIcon}</div>
+                <div className="text-5xl font-bold mb-2 text-gray-900">{account.bank}</div>
                 <img src={account.barcode} alt="barcode" className="h-10 object-contain mb-2" />
                 <img src={account.qr} alt="qr" className="h-20 object-contain" />
               </div>
@@ -163,8 +163,8 @@ export default function Pay() {
                 style={{ aspectRatio: "1/1" }}
                 draggable={false}
               />
-              <div className="text-white text-2xl mt-4">바코드 & QR코드</div>
-              <div className="text-gray-100 text-base mt-1">{acc.bank}</div>
+              
+              <div className="text-black font-bold text-5xl mt-4">{acc.bank}</div>
             </div>
           </div>
         )}

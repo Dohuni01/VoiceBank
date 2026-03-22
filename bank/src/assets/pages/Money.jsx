@@ -23,9 +23,13 @@ export default function Charge() {
   const getFontSize = (type, focused) => {
     if (type === "name") return focused ? "text-[3rem]" : "text-[1.8rem] font-extrabold";
     if (type === "num") return focused ? "text-[2.2rem]" : "text-[1.3rem] text-gray-600";
-    if (type === "amount") return focused ? "text-[3.2rem] text-blue-500" : "text-[1.7rem] text-blue-500 font-bold";
+    if (type === "amount") return focused ? "text-[3.2rem]" : "text-[1.7rem] text-blue-500 font-bold";
     return "";
   };
+
+  // 텍스트별 파랑색 강조
+  const getColor = (row, type) =>
+    focus.idx === row && focus.type === type ? "text-blue-500" : "";
 
   return (
     <SwipePage>
@@ -57,10 +61,14 @@ export default function Charge() {
                 {/* 아이콘 */}
                 <div className="text-[3rem] mr-6 select-none">{acc.icon}</div>
 
-                {/* 텍스트 정보 (각 요소에 돋보기 효과) */}
+                {/* 텍스트 정보 (각 요소에 돋보기 효과 + 파랑색 강조) */}
                 <div className="flex flex-col items-start relative w-full space-y-2">
                   <span
-                    className={`text-[1.6rem] font-extrabold cursor-pointer transition-transform duration-200 inline-block origin-left ${getTextScale(row, "name")}`}
+                    className={`
+                      text-[1.6rem] font-extrabold cursor-pointer transition-transform duration-200 inline-block origin-left
+                      ${getTextScale(row, "name")}
+                      ${getColor(row, "name")}
+                    `}
                     onPointerDown={e => {
                       e.stopPropagation();
                       setFocus({ idx: row, type: "name" });
@@ -71,7 +79,11 @@ export default function Charge() {
                     {acc.name}
                   </span>
                   <span
-                    className={`text-[1.1rem] text-gray-600 cursor-pointer transition-transform duration-200 inline-block origin-left ${getTextScale(row, "num")}`}
+                    className={`
+                      text-[1.1rem] text-gray-600 cursor-pointer transition-transform duration-200 inline-block origin-left
+                      ${getTextScale(row, "num")}
+                      ${getColor(row, "num")}
+                    `}
                     onPointerDown={e => {
                       e.stopPropagation();
                       setFocus({ idx: row, type: "num" });
@@ -82,7 +94,11 @@ export default function Charge() {
                     {acc.num}
                   </span>
                   <span
-                    className={`text-[2rem] text-blue-500 font-bold cursor-pointer transition-transform duration-200 inline-block origin-left ${getTextScale(row, "amount")}`}
+                    className={`
+                      text-[2rem] text-blue-500 font-bold cursor-pointer transition-transform duration-200 inline-block origin-left
+                      ${getTextScale(row, "amount")}
+                      ${getColor(row, "amount")}
+                    `}
                     onPointerDown={e => {
                       e.stopPropagation();
                       setFocus({ idx: row, type: "amount" });
